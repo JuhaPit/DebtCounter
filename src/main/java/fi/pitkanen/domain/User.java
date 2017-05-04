@@ -1,4 +1,4 @@
-package fi.haagahelia.domain;
+package fi.pitkanen.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

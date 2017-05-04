@@ -1,4 +1,4 @@
-package fi.haagahelia.domain;
+package fi.pitkanen.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private UserDetailServiceImpl userDetailsService;
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		
+		http.authorizeRequests().antMatchers("/css/**").permitAll()
+		.and()
 
-		http.authorizeRequests()
+		.authorizeRequests()
 			.antMatchers("/api/**").permitAll()
 			.anyRequest().authenticated()
 			.and()
@@ -33,10 +36,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth)
 			throws Exception {
 
-		/**auth.inMemoryAuthentication().withUser("user").password("password")
-				.roles("USER");
-		auth.inMemoryAuthentication().withUser("admin").password("admin1234")
-				.roles("ADMIN");*/
 		auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
 	}
 

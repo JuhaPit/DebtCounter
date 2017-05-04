@@ -1,0 +1,47 @@
+body {
+	
+	background: #000046;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+label {
+        
+    display:inline-block;
+    width:13em;
+    vertical-align:top;
+}
+
+#loginbody {
+	
+	display:block;
+	text-align:center;
+}
+
+#loginform {
+	
+	background: #56ccf2; /* fallback for old browsers */
+  	background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); /* Chrome 10-25, Safari 5.1-6 */
+  	background: linear-gradient(to right, #56ccf2, #2f80ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+    padding:5px;
+    max-width: 500px;
+    width:100%;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #56ccf2;
+    margin-top: 10%;
+}
+
+.error {
+	
+	color:red;
+}
+
+#brand {
+	
+	font-family: 'Righteous', cursive;
+}

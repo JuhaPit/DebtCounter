@@ -1,24 +1,23 @@
-package fi.haagahelia;
+package fi.pitkanen;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import fi.haagahelia.domain.Student;
-import fi.haagahelia.domain.StudentRepository;
-import fi.haagahelia.domain.User;
-import fi.haagahelia.domain.UserRepository;
+import fi.pitkanen.domain.PurchaseRepository;
+import fi.pitkanen.domain.User;
+import fi.pitkanen.domain.UserRepository;
 
 @SpringBootApplication
-public class StudentRestApplication {
+public class DebtCounterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentRestApplication.class, args);
+		SpringApplication.run(DebtCounterApplication.class, args);
 	}
 
 	@Bean
-	public CommandLineRunner demo(StudentRepository repository,
+	public CommandLineRunner demo(PurchaseRepository repository,
 			UserRepository users) {
 
 		User user1 = new User("user",
@@ -29,10 +28,6 @@ public class StudentRestApplication {
 				"ADMIN");
 
 		return (args) -> {
-			repository.save(new Student("Mary", "Poppins", "mary@mail.com"));
-			repository.save(new Student("John", "Johnson", "john@mail.com"));
-			repository.save(new Student("Mike", "Mitchell", "mike@email.com"));
-
 			users.save(user1);
 			users.save(user2);
 		};

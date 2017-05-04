@@ -1,4 +1,4 @@
-package fi.haagahelia.web;
+package fi.pitkanen.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 
-public class StudentController{
+public class SiteController{
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String studentListing(Model model) {
+	public String purchaseListing(Model model) {
 		return "../static/index";
 }
 	
